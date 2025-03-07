@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1588&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="第二节课开始">
 <title>编译原理</title>
 
-<link rel='canonical' href='http://localhost:1313/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/'>
+<link rel='canonical' href='http://localhost:1588/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/'>
 
 <link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="编译原理">
 <meta property='og:description' content="第二节课开始">
-<meta property='og:url' content='http://localhost:1313/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/'>
+<meta property='og:url' content='http://localhost:1588/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/'>
 <meta property='og:site_name' content='dolly'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-07T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-07T00:00:00&#43;00:00'/><meta property='og:image' content='http://localhost:1313/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/8a57cba2471e8a2495fb97fc0c03d9ac26dfa064.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-07T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-07T00:00:00&#43;00:00'/><meta property='og:image' content='http://localhost:1588/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/8a57cba2471e8a2495fb97fc0c03d9ac26dfa064.jpg' />
 <meta name="twitter:title" content="编译原理">
 <meta name="twitter:description" content="第二节课开始"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/8a57cba2471e8a2495fb97fc0c03d9ac26dfa064.jpg' />
+    <meta name="twitter:image" content='http://localhost:1588/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/8a57cba2471e8a2495fb97fc0c03d9ac26dfa064.jpg' />
   
 
 
@@ -582,6 +582,59 @@
         document.head.appendChild(customFont);
     }());
 </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<meting-js
+	server="netease"
+	type="playlist"
+    	fixed=true 
+    	lrc-type=0
+	id="13014257623">
+</meting-js>
+
+<script>
+    ap = null
+    Object.defineProperty(document.querySelector('meting-js'),"aplayer",{
+        set: function(aplayer) {
+            ap=aplayer
+            ready();
+        }
+    });
+    isRecover = false;
+    function ready(){
+        ap.on('canplay', function () {
+            if(!isRecover){
+                if(localStorage.getItem("musicIndex") != null){
+                    musicIndex = localStorage.getItem("musicIndex");
+                    musicTime = localStorage.getItem("musicTime");
+                    if(ap.list.index != musicIndex){
+                        ap.list.switch(musicIndex);
+                    }else{
+                        ap.seek(musicTime);
+                        ap.play();
+                        localStorage.clear();
+                        isRecover = true;
+                    }
+                }else{
+                    isRecover = true;
+                }
+            }
+        });
+    }
+    window.onbeforeunload = function(event) {
+        if(!ap.audio.paused){
+            musicIndex = ap.list.index;
+            musicTime = ap.audio.currentTime;
+            localStorage.setItem("musicIndex",musicIndex);
+            localStorage.setItem("musicTime",musicTime);
+        }
+    };
+</script>
+
+
+代码来自：https://yeelz.com/post/564.html
     </body>
 </html>
