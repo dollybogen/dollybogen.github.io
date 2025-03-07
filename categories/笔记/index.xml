@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>笔记 on dolly</title>
-        <link>http://localhost:1588/categories/%E7%AC%94%E8%AE%B0/</link>
+        <link>http://localhost:1313/categories/%E7%AC%94%E8%AE%B0/</link>
         <description>Recent content in 笔记 on dolly</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>dolly</copyright>
-        <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1588/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>编译原理</title>
-        <link>http://localhost:1588/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</link>
+        <link>http://localhost:1313/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</link>
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1588/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</guid>
-        <description>&lt;img src="http://localhost:1588/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/8a57cba2471e8a2495fb97fc0c03d9ac26dfa064.jpg" alt="Featured image of post 编译原理" /&gt;&lt;h2 id=&#34;词法分析的基本功能&#34;&gt;词法分析的基本功能
+        <guid>http://localhost:1313/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</guid>
+        <description>&lt;img src="http://localhost:1313/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/8a57cba2471e8a2495fb97fc0c03d9ac26dfa064.jpg" alt="Featured image of post 编译原理" /&gt;&lt;h2 id=&#34;词法分析的基本功能&#34;&gt;词法分析的基本功能
 &lt;/h2&gt;&lt;h3 id=&#34;单词&#34;&gt;单词
 &lt;/h3&gt;&lt;p&gt;保留字&amp;mdash;while,do（确定有限的&lt;/p&gt;
 &lt;p&gt;标识符&amp;mdash;number1&lt;/p&gt;
