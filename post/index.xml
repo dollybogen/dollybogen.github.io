@@ -7,7 +7,29 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>dolly</copyright>
-        <lastBuildDate>Fri, 07 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 11 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>软件工程</title>
+        <link>http://localhost:1313/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</link>
+        <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</guid>
+        <description>&lt;img src="http://localhost:1313/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8E%8B%E7%BC%A9%E7%89%88%20%281%29.png" alt="Featured image of post 软件工程" /&gt;&lt;p&gt;瀑布模型——&amp;gt;v模型&lt;/p&gt;
+&lt;h3 id=&#34;原型快速原型模型&#34;&gt;原型/快速原型模型
+&lt;/h3&gt;&lt;p&gt;实际可以运行的一个模型，和瀑布模型相比没有反馈环&lt;/p&gt;
+&lt;h3 id=&#34;阶段是开发演化模型&#34;&gt;阶段是开发，演化模型
+&lt;/h3&gt;&lt;p&gt;增量开发，迭代开发&lt;/p&gt;
+&lt;h3 id=&#34;增量模型&#34;&gt;增量模型
+&lt;/h3&gt;&lt;p&gt;每个组件一个一个的完成&lt;/p&gt;
+&lt;h3 id=&#34;螺旋模型&#34;&gt;螺旋模型
+&lt;/h3&gt;&lt;p&gt;原型模型上每一个步骤添加一个风险分析的过程&lt;/p&gt;
+&lt;h3 id=&#34;喷泉模型&#34;&gt;喷泉模型
+&lt;/h3&gt;&lt;p&gt;上下两层之间存在交叠&lt;/p&gt;
+&lt;h3 id=&#34;rup&#34;&gt;RUP
+&lt;/h3&gt;&lt;p&gt;开发经验：迭代式开发，使用用例和脚本，使用基于组件的架构，可视化建模&lt;/p&gt;
+&lt;p&gt;软件开发的生命周期，先期阶段，细化阶段，构造阶段，&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>LeetCode 热题 100 (1)</title>
         <link>http://localhost:1313/p/hot-100/</link>
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
