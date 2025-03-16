@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>书本 on dolly</title>
+        <link>http://localhost:5029/categories/%E4%B9%A6%E6%9C%AC/</link>
+        <description>Recent content in 书本 on dolly</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>dolly</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:5029/categories/%E4%B9%A6%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>群智感知计算</title>
+        <link>http://localhost:5029/p/%E7%BE%A4%E6%99%BA%E6%84%9F%E7%9F%A5%E8%AE%A1%E7%AE%97/</link>
+        <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5029/p/%E7%BE%A4%E6%99%BA%E6%84%9F%E7%9F%A5%E8%AE%A1%E7%AE%97/</guid>
+        <description>&lt;img src="http://localhost:5029/p/%E7%BE%A4%E6%99%BA%E6%84%9F%E7%9F%A5%E8%AE%A1%E7%AE%97/87c0e1284db0589bd3eaf124fb7d4d0eac0d489b.png" alt="Featured image of post 群智感知计算" /&gt;&lt;h2 id=&#34;绪论&#34;&gt;绪论
+&lt;/h2&gt;&lt;p&gt;希亚。拉博夫旗帜定位事件&lt;/p&gt;
+&lt;p&gt;群智感知计算的定义，碎片化，低质冗余&lt;/p&gt;
+&lt;h3 id=&#34;发展历程&#34;&gt;发展历程
+&lt;/h3&gt;&lt;p&gt;从众包，参与感知发展而来&lt;/p&gt;
+&lt;p&gt;数据来源方式为机会式感知和参与式感知&lt;/p&gt;
+&lt;p&gt;任务的生命周期：发布任务，执行任务，数据汇聚，结果移交&lt;/p&gt;
+&lt;p&gt;需要适用于动态数据流的优质数据挑选策略&lt;/p&gt;
+&lt;p&gt;研究内容：感知任务分配与激励机制，感知数据的优选，群志感知隐私保护，感知数据的高效移交，群智感知计算的创新应用&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -2,18 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>笔记 on dolly</title>
-        <link>http://localhost:1313/categories/%E7%AC%94%E8%AE%B0/</link>
+        <link>http://localhost:5029/categories/%E7%AC%94%E8%AE%B0/</link>
         <description>Recent content in 笔记 on dolly</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>dolly</copyright>
-        <lastBuildDate>Tue, 11 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:5029/categories/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>群智感知计算</title>
+        <link>http://localhost:5029/p/%E7%BE%A4%E6%99%BA%E6%84%9F%E7%9F%A5%E8%AE%A1%E7%AE%97/</link>
+        <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:5029/p/%E7%BE%A4%E6%99%BA%E6%84%9F%E7%9F%A5%E8%AE%A1%E7%AE%97/</guid>
+        <description>&lt;img src="http://localhost:5029/p/%E7%BE%A4%E6%99%BA%E6%84%9F%E7%9F%A5%E8%AE%A1%E7%AE%97/87c0e1284db0589bd3eaf124fb7d4d0eac0d489b.png" alt="Featured image of post 群智感知计算" /&gt;&lt;h2 id=&#34;绪论&#34;&gt;绪论
+&lt;/h2&gt;&lt;p&gt;希亚。拉博夫旗帜定位事件&lt;/p&gt;
+&lt;p&gt;群智感知计算的定义，碎片化，低质冗余&lt;/p&gt;
+&lt;h3 id=&#34;发展历程&#34;&gt;发展历程
+&lt;/h3&gt;&lt;p&gt;从众包，参与感知发展而来&lt;/p&gt;
+&lt;p&gt;数据来源方式为机会式感知和参与式感知&lt;/p&gt;
+&lt;p&gt;任务的生命周期：发布任务，执行任务，数据汇聚，结果移交&lt;/p&gt;
+&lt;p&gt;需要适用于动态数据流的优质数据挑选策略&lt;/p&gt;
+&lt;p&gt;研究内容：感知任务分配与激励机制，感知数据的优选，群志感知隐私保护，感知数据的高效移交，群智感知计算的创新应用&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>软件工程</title>
-        <link>http://localhost:1313/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</link>
+        <link>http://localhost:5029/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</link>
         <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</guid>
-        <description>&lt;img src="http://localhost:1313/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8E%8B%E7%BC%A9%E7%89%88%20%281%29.png" alt="Featured image of post 软件工程" /&gt;&lt;p&gt;瀑布模型——&amp;gt;v模型&lt;/p&gt;
+        <guid>http://localhost:5029/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</guid>
+        <description>&lt;img src="http://localhost:5029/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/%E5%8E%8B%E7%BC%A9%E7%89%88%20%281%29.png" alt="Featured image of post 软件工程" /&gt;&lt;p&gt;瀑布模型——&amp;gt;v模型&lt;/p&gt;
 &lt;h3 id=&#34;原型快速原型模型&#34;&gt;原型/快速原型模型
 &lt;/h3&gt;&lt;p&gt;实际可以运行的一个模型，和瀑布模型相比没有反馈环&lt;/p&gt;
 &lt;h3 id=&#34;阶段是开发演化模型&#34;&gt;阶段是开发，演化模型
@@ -26,16 +43,24 @@
 &lt;/h3&gt;&lt;p&gt;上下两层之间存在交叠&lt;/p&gt;
 &lt;h3 id=&#34;rup&#34;&gt;RUP
 &lt;/h3&gt;&lt;p&gt;开发经验：迭代式开发，使用用例和脚本，使用基于组件的架构，可视化建模&lt;/p&gt;
-&lt;p&gt;软件开发的生命周期，先期阶段，细化阶段，构造阶段，&lt;/p&gt;
+&lt;p&gt;软件开发的生命周期，先期阶段，细化阶段，构造阶段，移交阶段（横轴，10，30，50，10时间使用比&lt;/p&gt;
+&lt;p&gt;inception,elaboration,construction,transition&lt;/p&gt;
+&lt;p&gt;迭代，1，2，3，2&lt;/p&gt;
+&lt;p&gt;worker，activity，artifact，workflow&lt;/p&gt;
+&lt;p&gt;9个核心工作流&lt;/p&gt;
+&lt;p&gt;架构师，分析师&lt;/p&gt;
+&lt;h3 id=&#34;敏捷过程&#34;&gt;敏捷过程
+&lt;/h3&gt;&lt;p&gt;4个价值观和12个原则&lt;/p&gt;
+&lt;p&gt;极限编程，user story&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>编译原理</title>
-        <link>http://localhost:1313/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</link>
+        <link>http://localhost:5029/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</link>
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:1313/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</guid>
-        <description>&lt;img src="http://localhost:1313/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/8a57cba2471e8a2495fb97fc0c03d9ac26dfa064.jpg" alt="Featured image of post 编译原理" /&gt;&lt;h2 id=&#34;词法分析的基本功能&#34;&gt;词法分析的基本功能
+        <guid>http://localhost:5029/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</guid>
+        <description>&lt;img src="http://localhost:5029/p/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/8a57cba2471e8a2495fb97fc0c03d9ac26dfa064.jpg" alt="Featured image of post 编译原理" /&gt;&lt;h2 id=&#34;词法分析的基本功能&#34;&gt;词法分析的基本功能
 &lt;/h2&gt;&lt;h3 id=&#34;单词&#34;&gt;单词
 &lt;/h3&gt;&lt;p&gt;保留字&amp;mdash;while,do（确定有限的&lt;/p&gt;
 &lt;p&gt;标识符&amp;mdash;number1&lt;/p&gt;
@@ -54,6 +79,18 @@
 &lt;p&gt;(y∣z)∗(xx(y∣z)∗)∗|x(y|z)x&lt;/p&gt;
 &lt;p&gt;2、不包含连续两个y的所有符号串集合。&lt;/p&gt;
 &lt;p&gt;(x∣z∣y(x∣z))∗y?&lt;/p&gt;
+&lt;h2 id=&#34;第三节课&#34;&gt;第三节课
+&lt;/h2&gt;&lt;h3 id=&#34;确定有限自动机&#34;&gt;确定有限自动机
+&lt;/h3&gt;&lt;p&gt;DFA，（求和符号，s，s0，Z，f）&lt;/p&gt;
+&lt;p&gt;求和符号=字母表，s=状态集合，f=状态准换函数，s0=初始状态，Z=终止状态集合&lt;/p&gt;
+&lt;h3 id=&#34;非确定有限自动机&#34;&gt;非确定有限自动机
+&lt;/h3&gt;&lt;p&gt;NFA，s0初始状态集，存在空，转化函数可以到一个集合&lt;/p&gt;
+&lt;h2 id=&#34;词法分析&#34;&gt;词法分析
+&lt;/h2&gt;&lt;h3 id=&#34;自动机的最小化&#34;&gt;自动机的最小化
+&lt;/h3&gt;&lt;p&gt;定义：等价状态，无关状态&lt;/p&gt;
+&lt;p&gt;dfa到正则表达式，正则表达式到nfa&lt;/p&gt;
+&lt;h3 id=&#34;词法分析器的设计&#34;&gt;词法分析器的设计
+&lt;/h3&gt;&lt;p&gt;token样例 类型+内容&lt;/p&gt;
 </description>
         </item>
         
