@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="背景 16年ICDM ccf b 北京大学王乐业 基础介绍 目的：减少差异位置混淆造成的数据质量损失 三个组件：数据调整函数，将原始传感数据拟合到模糊的位置。">
+<title>16年论文</title>
+
+<link rel='canonical' href='http://localhost:1313/p/16%E5%B9%B4%E8%AE%BA%E6%96%87/'>
+
+<link rel="stylesheet" href="/scss/style.min.0304c6baf04e01a8fe70693791cb744d56a3578a3120a8796cefc66825aa39c7.css"><meta property='og:title' content="16年论文">
+<meta property='og:description' content="背景 16年ICDM ccf b 北京大学王乐业 基础介绍 目的：减少差异位置混淆造成的数据质量损失 三个组件：数据调整函数，将原始传感数据拟合到模糊的位置。">
+<meta property='og:url' content='http://localhost:1313/p/16%E5%B9%B4%E8%AE%BA%E6%96%87/'>
+<meta property='og:site_name' content='dolly'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-03-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-13T00:00:00&#43;00:00'/><meta property='og:image' content='http://localhost:1313/p/16%E5%B9%B4%E8%AE%BA%E6%96%87/87c0e1284db0589bd3eaf124fb7d4d0eac0d489b.png' />
+<meta name="twitter:title" content="16年论文">
+<meta name="twitter:description" content="背景 16年ICDM ccf b 北京大学王乐业 基础介绍 目的：减少差异位置混淆造成的数据质量损失 三个组件：数据调整函数，将原始传感数据拟合到模糊的位置。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://localhost:1313/p/16%E5%B9%B4%E8%AE%BA%E6%96%87/87c0e1284db0589bd3eaf124fb7d4d0eac0d489b.png' />
+  
+
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu476149702306619662.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">😅</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">dolly</a></h1>
+            <h2 class="site-description">欢迎来到我的博客</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/289827472'
+                        target="_blank"
+                        title="bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/dollybogen'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>“about”</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/link/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>link</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#背景">背景</a>
+      <ol>
+        <li><a href="#基础介绍">基础介绍</a></li>
+        <li><a href="#背景介绍">背景介绍</a></li>
+        <li><a href="#位置隐私-预留框架">位置隐私-预留框架</a></li>
+        <li><a href="#差分位置隐私">差分位置隐私</a></li>
+        <li><a href="#降低数据质量损失的差分位置隐私">降低数据质量损失的差分位置隐私</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/16%E5%B9%B4%E8%AE%BA%E6%96%87/">
+                <img src="/p/16%E5%B9%B4%E8%AE%BA%E6%96%87/87c0e1284db0589bd3eaf124fb7d4d0eac0d489b_hu14060565053780472682.png"
+                        srcset="/p/16%E5%B9%B4%E8%AE%BA%E6%96%87/87c0e1284db0589bd3eaf124fb7d4d0eac0d489b_hu14060565053780472682.png 800w, /p/16%E5%B9%B4%E8%AE%BA%E6%96%87/87c0e1284db0589bd3eaf124fb7d4d0eac0d489b_hu13297957599588084601.png 1600w"
+                        width="800" 
+                        height="465" 
+                        loading="lazy"
+                        alt="Featured image of post 16年论文" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E8%AE%BA%E6%96%87/" >
+                论文
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/16%E5%B9%B4%E8%AE%BA%E6%96%87/">16年论文</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-13</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 3 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="背景">背景
+</h2><p>16年ICDM  ccf b</p>
+<p>北京大学王乐业</p>
+<h3 id="基础介绍">基础介绍
+</h3><p>目的：减少差异位置混淆造成的数据质量损失</p>
+<p>三个组件：数据调整函数，将原始传感数据拟合到模糊的位置。线性规划来选择一个最优的位置模糊函数，旨在最小化数据调整中的不确定性。提出了一种不确定性推理算法，以提高模糊数据的推理精度体。</p>
+<p>mcs——&gt;稀疏mcs：目标感测区域有时可能太大，以至于难以获得移动用户的足够空间覆盖-&gt;位置隐私</p>
+<p>lbs-&gt;位置混淆（我的论文本质上是位置混淆），匿名化</p>
+<p>混淆——&gt;伪装：用户的位置表示为包含多个细粒度单元格的隐藏区域，缺点：先验知识很致命-&gt;引入差分隐私</p>
+<p>传统lbs位置混淆是由距离来测定相似，的王乐业以数据差异来测定“只要两个位置的感测值足够接近，参与者的位置就可以被映射到很远的地方”不合理（我的论文以tran来测定相似）</p>
+<p>三个平衡要素：参与者的隐私要求、对手对参与者实际位置分布的先验知识，以及位置混淆导致的数据质量下降</p>
+<p>隐私保护框架，由三个部分组成：（i）数据调整功能，使原始传感数据适应模糊的位置；（ii）最优混淆函数DUM-e及其快速近似值FDUM-e，以在差分隐私和均匀分布混淆的约束下最小化数据调整的不确定性；以及（iii）不确定性推理算法，以提高模糊数据的推理精度。</p>
+<h3 id="背景介绍">背景介绍
+</h3><p>稀疏MCS用例，收集的感知矩阵（矩阵完成问题），数据推理算法（压缩感知）</p>
+<p>压缩感知两个理论假设：1.感测区域应均匀分布，2，总推理误差与采样条目的不确定性水平成正比</p>
+<h3 id="位置隐私-预留框架">位置隐私-预留框架
+</h3><p>位置隐私保护框架，包含两个组件：位置模糊和数据调整</p>
+<p>服务器端以离线方式生成概率混淆矩阵和数据调整函数。该矩阵对将任何一个区域混淆到另一个区域的概率进行编码。数据调整功能用于减少由于区域混淆导致的数据不确定性。</p>
+<p>客户端流程：下载矩阵，混淆位置，数据调整，上传数据&mdash;-服务器补全</p>
+<h3 id="差分位置隐私">差分位置隐私
+</h3><p>对抗模型：贝叶斯攻击：假设对手对用户实际区域r的概率分布有一些先验知识，对手观察到用户的模糊区域r∗，他可以根据贝叶斯规则预测用户位置的后验分布，记为σ（r）</p>
+<p>备注：对轨迹攻击的研究将是我们未来的工作</p>
+<p>我们在稀疏MCS中定义差分隐私的目的是将对手的后验知识的改进限制在先验知识之上，即σ（r）/π（r）</p>
+<p>e差分隐私定义：e越小，保护程度越强，越接近平均</p>
+<p>限制了先前对手模型中的知识增益，即σ（r）/π（r），无论对手的先验知识π（r）的值是多少</p>
+<p>后验知识定义</p>
+<h3 id="降低数据质量损失的差分位置隐私">降低数据质量损失的差分位置隐私
+</h3><p>混淆的数据质量要求：压缩感知要求：1.参与者从均匀分布的区域报告，2。他们报告的感知数据是准确的</p>
+<p>实际上：模糊区域的分布可能是不平衡的，虽然调整过依然存在一些不确定性</p>
+<p>最优模糊矩阵生成：我们试图降低数据的不确定性（使用混淆矩阵最小化数据不确定性预期），并控制位置模糊中产生的模糊区域的分布均匀性（混淆矩阵中引入了均匀性约束）</p>
+<p>目标：数据不确定性最小化</p>
+<p>服务器上进行线性回归模型学习，而在移动客户端上进行线性拟合估计</p>
+<p>定义了一个不确定性矩阵U来表示所提出的数据调整模型的内在误差或不确定性</p>
+<p>目标：最小化U中数据不确定性的总体期望</p>
+<p>约束：均匀模糊区域分布模糊区域需要均匀分布</p>
+<p>线性优化：DUM-e，实质是一个满足约束的一个线性优化问题</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 dolly
+    </section>
+    
+    <section class="powerby">
+        
+            2777619715@qq.com <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.26.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<meting-js
+	server="netease"
+	type="playlist"
+    	fixed=true 
+    	lrc-type=0
+	id="13014257623">
+</meting-js>
+
+<script>
+    ap = null
+    Object.defineProperty(document.querySelector('meting-js'),"aplayer",{
+        set: function(aplayer) {
+            ap=aplayer
+            ready();
+        }
+    });
+    isRecover = false;
+    function ready(){
+        ap.on('canplay', function () {
+            if(!isRecover){
+                if(localStorage.getItem("musicIndex") != null){
+                    musicIndex = localStorage.getItem("musicIndex");
+                    musicTime = localStorage.getItem("musicTime");
+                    if(ap.list.index != musicIndex){
+                        ap.list.switch(musicIndex);
+                    }else{
+                        ap.seek(musicTime);
+                        ap.play();
+                        localStorage.clear();
+                        isRecover = true;
+                    }
+                }else{
+                    isRecover = true;
+                }
+            }
+        });
+    }
+    window.onbeforeunload = function(event) {
+        if(!ap.audio.paused){
+            musicIndex = ap.list.index;
+            musicTime = ap.audio.currentTime;
+            localStorage.setItem("musicIndex",musicIndex);
+            localStorage.setItem("musicTime",musicTime);
+        }
+    };
+</script>
+
+
+代码来自：https://yeelz.com/post/564.html
+    </body>
+</html>

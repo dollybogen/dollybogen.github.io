@@ -2,58 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Categories on dolly</title>
-        <link>http://localhost:5029/categories/</link>
+        <link>http://localhost:1313/categories/</link>
         <description>Recent content in Categories on dolly</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>dolly</copyright>
-        <lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:5029/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>笔记</title>
-        <link>http://localhost:5029/categories/%E7%AC%94%E8%AE%B0/</link>
+        <link>http://localhost:1313/categories/%E7%AC%94%E8%AE%B0/</link>
         <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:5029/categories/%E7%AC%94%E8%AE%B0/</guid>
+        <guid>http://localhost:1313/categories/%E7%AC%94%E8%AE%B0/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>论文</title>
+        <link>http://localhost:1313/categories/%E8%AE%BA%E6%96%87/</link>
+        <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/categories/%E8%AE%BA%E6%96%87/</guid>
         <description></description>
         </item>
         <item>
         <title>书本</title>
-        <link>http://localhost:5029/categories/%E4%B9%A6%E6%9C%AC/</link>
+        <link>http://localhost:1313/categories/%E4%B9%A6%E6%9C%AC/</link>
         <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:5029/categories/%E4%B9%A6%E6%9C%AC/</guid>
+        <guid>http://localhost:1313/categories/%E4%B9%A6%E6%9C%AC/</guid>
         <description></description>
         </item>
         <item>
         <title>课程</title>
-        <link>http://localhost:5029/categories/%E8%AF%BE%E7%A8%8B/</link>
+        <link>http://localhost:1313/categories/%E8%AF%BE%E7%A8%8B/</link>
         <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:5029/categories/%E8%AF%BE%E7%A8%8B/</guid>
+        <guid>http://localhost:1313/categories/%E8%AF%BE%E7%A8%8B/</guid>
         <description></description>
         </item>
         <item>
         <title>比赛</title>
-        <link>http://localhost:5029/categories/%E6%AF%94%E8%B5%9B/</link>
+        <link>http://localhost:1313/categories/%E6%AF%94%E8%B5%9B/</link>
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:5029/categories/%E6%AF%94%E8%B5%9B/</guid>
+        <guid>http://localhost:1313/categories/%E6%AF%94%E8%B5%9B/</guid>
         <description></description>
         </item>
         <item>
         <title>代码</title>
-        <link>http://localhost:5029/categories/%E4%BB%A3%E7%A0%81/</link>
+        <link>http://localhost:1313/categories/%E4%BB%A3%E7%A0%81/</link>
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:5029/categories/%E4%BB%A3%E7%A0%81/</guid>
+        <guid>http://localhost:1313/categories/%E4%BB%A3%E7%A0%81/</guid>
         <description></description>
         </item>
         <item>
         <title>Test</title>
-        <link>http://localhost:5029/categories/test/</link>
+        <link>http://localhost:1313/categories/test/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:5029/categories/test/</guid>
-        <description>&lt;img src="http://localhost:5029/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
+        <guid>http://localhost:1313/categories/test/</guid>
+        <description>&lt;img src="http://localhost:1313/categories/test/hutomo-abrianto-l2jk-uxb1BY-unsplash.jpg" alt="Featured image of post Test" /&gt;</description>
         </item>
         
     </channel>

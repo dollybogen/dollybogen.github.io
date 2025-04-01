@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>论文 on dolly</title>
+        <link>http://localhost:1313/categories/%E8%AE%BA%E6%96%87/</link>
+        <description>Recent content in 论文 on dolly</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>dolly</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E8%AE%BA%E6%96%87/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>16年论文</title>
+        <link>http://localhost:1313/p/16%E5%B9%B4%E8%AE%BA%E6%96%87/</link>
+        <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/16%E5%B9%B4%E8%AE%BA%E6%96%87/</guid>
+        <description>&lt;img src="http://localhost:1313/p/16%E5%B9%B4%E8%AE%BA%E6%96%87/87c0e1284db0589bd3eaf124fb7d4d0eac0d489b.png" alt="Featured image of post 16年论文" /&gt;&lt;h2 id=&#34;背景&#34;&gt;背景
+&lt;/h2&gt;&lt;p&gt;16年ICDM  ccf b&lt;/p&gt;
+&lt;p&gt;北京大学王乐业&lt;/p&gt;
+&lt;h3 id=&#34;基础介绍&#34;&gt;基础介绍
+&lt;/h3&gt;&lt;p&gt;目的：减少差异位置混淆造成的数据质量损失&lt;/p&gt;
+&lt;p&gt;三个组件：数据调整函数，将原始传感数据拟合到模糊的位置。线性规划来选择一个最优的位置模糊函数，旨在最小化数据调整中的不确定性。提出了一种不确定性推理算法，以提高模糊数据的推理精度体。&lt;/p&gt;
+&lt;p&gt;mcs——&amp;gt;稀疏mcs：目标感测区域有时可能太大，以至于难以获得移动用户的足够空间覆盖-&amp;gt;位置隐私&lt;/p&gt;
+&lt;p&gt;lbs-&amp;gt;位置混淆（我的论文本质上是位置混淆），匿名化&lt;/p&gt;
+&lt;p&gt;混淆——&amp;gt;伪装：用户的位置表示为包含多个细粒度单元格的隐藏区域，缺点：先验知识很致命-&amp;gt;引入差分隐私&lt;/p&gt;
+&lt;p&gt;传统lbs位置混淆是由距离来测定相似，的王乐业以数据差异来测定“只要两个位置的感测值足够接近，参与者的位置就可以被映射到很远的地方”不合理（我的论文以tran来测定相似）&lt;/p&gt;
+&lt;p&gt;三个平衡要素：参与者的隐私要求、对手对参与者实际位置分布的先验知识，以及位置混淆导致的数据质量下降&lt;/p&gt;
+&lt;p&gt;隐私保护框架，由三个部分组成：（i）数据调整功能，使原始传感数据适应模糊的位置；（ii）最优混淆函数DUM-e及其快速近似值FDUM-e，以在差分隐私和均匀分布混淆的约束下最小化数据调整的不确定性；以及（iii）不确定性推理算法，以提高模糊数据的推理精度。&lt;/p&gt;
+&lt;h3 id=&#34;背景介绍&#34;&gt;背景介绍
+&lt;/h3&gt;&lt;p&gt;稀疏MCS用例，收集的感知矩阵（矩阵完成问题），数据推理算法（压缩感知）&lt;/p&gt;
+&lt;p&gt;压缩感知两个理论假设：1.感测区域应均匀分布，2，总推理误差与采样条目的不确定性水平成正比&lt;/p&gt;
+&lt;h3 id=&#34;位置隐私-预留框架&#34;&gt;位置隐私-预留框架
+&lt;/h3&gt;&lt;p&gt;位置隐私保护框架，包含两个组件：位置模糊和数据调整&lt;/p&gt;
+&lt;p&gt;服务器端以离线方式生成概率混淆矩阵和数据调整函数。该矩阵对将任何一个区域混淆到另一个区域的概率进行编码。数据调整功能用于减少由于区域混淆导致的数据不确定性。&lt;/p&gt;
+&lt;p&gt;客户端流程：下载矩阵，混淆位置，数据调整，上传数据&amp;mdash;-服务器补全&lt;/p&gt;
+&lt;h3 id=&#34;差分位置隐私&#34;&gt;差分位置隐私
+&lt;/h3&gt;&lt;p&gt;对抗模型：贝叶斯攻击：假设对手对用户实际区域r的概率分布有一些先验知识，对手观察到用户的模糊区域r∗，他可以根据贝叶斯规则预测用户位置的后验分布，记为σ（r）&lt;/p&gt;
+&lt;p&gt;备注：对轨迹攻击的研究将是我们未来的工作&lt;/p&gt;
+&lt;p&gt;我们在稀疏MCS中定义差分隐私的目的是将对手的后验知识的改进限制在先验知识之上，即σ（r）/π（r）&lt;/p&gt;
+&lt;p&gt;e差分隐私定义：e越小，保护程度越强，越接近平均&lt;/p&gt;
+&lt;p&gt;限制了先前对手模型中的知识增益，即σ（r）/π（r），无论对手的先验知识π（r）的值是多少&lt;/p&gt;
+&lt;p&gt;后验知识定义&lt;/p&gt;
+&lt;h3 id=&#34;降低数据质量损失的差分位置隐私&#34;&gt;降低数据质量损失的差分位置隐私
+&lt;/h3&gt;&lt;p&gt;混淆的数据质量要求：压缩感知要求：1.参与者从均匀分布的区域报告，2。他们报告的感知数据是准确的&lt;/p&gt;
+&lt;p&gt;实际上：模糊区域的分布可能是不平衡的，虽然调整过依然存在一些不确定性&lt;/p&gt;
+&lt;p&gt;最优模糊矩阵生成：我们试图降低数据的不确定性（使用混淆矩阵最小化数据不确定性预期），并控制位置模糊中产生的模糊区域的分布均匀性（混淆矩阵中引入了均匀性约束）&lt;/p&gt;
+&lt;p&gt;目标：数据不确定性最小化&lt;/p&gt;
+&lt;p&gt;服务器上进行线性回归模型学习，而在移动客户端上进行线性拟合估计&lt;/p&gt;
+&lt;p&gt;定义了一个不确定性矩阵U来表示所提出的数据调整模型的内在误差或不确定性&lt;/p&gt;
+&lt;p&gt;目标：最小化U中数据不确定性的总体期望&lt;/p&gt;
+&lt;p&gt;约束：均匀模糊区域分布模糊区域需要均匀分布&lt;/p&gt;
+&lt;p&gt;线性优化：DUM-e，实质是一个满足约束的一个线性优化问题&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
