@@ -122,6 +122,25 @@
 &lt;p&gt;预测值叫回归&lt;/p&gt;
 &lt;p&gt;问题：将问题变成机器学习问题，缺高质量数据，训练模型贵，长期监控模型，公平性问题（由数据引发的）&lt;/p&gt;
 &lt;p&gt;将人分类（四类）：领域专家，数据科学家，机器学习专家，sde（训练模型）&lt;/p&gt;
+&lt;h2 id=&#34;第二节课&#34;&gt;第二节课
+&lt;/h2&gt;&lt;h3 id=&#34;数据的获取&#34;&gt;数据的获取
+&lt;/h3&gt;&lt;p&gt;找已经有的数据集，数据的采集&lt;/p&gt;
+&lt;p&gt;常见的数据集怎么来到，mnlist，imagenet，audioset(网上爬)&lt;/p&gt;
+&lt;p&gt;paperwithcodes论文实现方法kaggle竞赛的数据google dateset&lt;/p&gt;
+&lt;p&gt;学术数据集，竞赛数据集，原始数据集&lt;/p&gt;
+&lt;h3 id=&#34;数据融合&#34;&gt;数据融合
+&lt;/h3&gt;&lt;p&gt;不同表的数据给他融合起来，数据库的join（连接）&lt;/p&gt;
+&lt;p&gt;找朱列，处理缺失值，解决重复，&lt;/p&gt;
+&lt;h3 id=&#34;生成数据集&#34;&gt;生成数据集
+&lt;/h3&gt;&lt;p&gt;gans生成网站，数据增强（旋转，加噪）（文本的翻译再翻译回来）&lt;/p&gt;
+&lt;h2 id=&#34;第四节课&#34;&gt;第四节课
+&lt;/h2&gt;&lt;h3 id=&#34;数据标注&#34;&gt;数据标注
+&lt;/h3&gt;&lt;p&gt;是否有足够多的标注&amp;mdash;（有一点）半监督学习&amp;mdash;（是否有钱&amp;mdash;众包）&amp;mdash;（啥都没有）弱监督学习&lt;/p&gt;
+&lt;p&gt;半监督学习，一些小的标注数据，与大的无标注数据。一些假设，聚类的假设，流形假设（降维）&lt;/p&gt;
+&lt;p&gt;自学习：小标号数据训练，给大无标号数据标号，不断循环 （置信度）&lt;/p&gt;
+&lt;p&gt;众包：imagenet，任务比较简单，成本，质量的控制&lt;/p&gt;
+&lt;p&gt;主动学习：每次给最重要的数据去标记（通过QBC投票）&lt;/p&gt;
+&lt;p&gt;弱监督学习：半自动生成标号，数据编程（总结规律给你结论）&lt;/p&gt;
 </description>
         </item>
         

@@ -143,7 +143,7 @@
         
         
         <li >
-            <a href='/about/' >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
                 
                 
                 
@@ -156,7 +156,7 @@
 
 
                 
-                <span>“about”</span>
+                <span>关于</span>
             </a>
         </li>
         
@@ -176,7 +176,7 @@
 
 
                 
-                <span>archives</span>
+                <span>档案</span>
             </a>
         </li>
         
@@ -195,13 +195,13 @@
 
 
                 
-                <span>search</span>
+                <span>搜索</span>
             </a>
         </li>
         
         
         <li >
-            <a href='/link/' >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
                 
                 
                 
@@ -214,7 +214,7 @@
 
 
                 
-                <span>link</span>
+                <span>链接</span>
             </a>
         </li>
         
@@ -276,6 +276,9 @@
         <li><a href="#位置隐私-预留框架">位置隐私-预留框架</a></li>
         <li><a href="#差分位置隐私">差分位置隐私</a></li>
         <li><a href="#降低数据质量损失的差分位置隐私">降低数据质量损失的差分位置隐私</a></li>
+        <li><a href="#评估">评估</a></li>
+        <li><a href="#相关工作">相关工作</a></li>
+        <li><a href="#结论">结论</a></li>
       </ol>
     </li>
   </ol>
@@ -354,7 +357,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 3 分钟
+                    阅读时长: 4 分钟
                 </time>
             </div>
         
@@ -405,6 +408,22 @@
 <p>目标：最小化U中数据不确定性的总体期望</p>
 <p>约束：均匀模糊区域分布模糊区域需要均匀分布</p>
 <p>线性优化：DUM-e，实质是一个满足约束的一个线性优化问题</p>
+<p>最优模糊矩阵的近似：DUM-e是O3的复杂度，因为其为一个完全图</p>
+<p>使用2临界图进行改进e经过一次传递，变成满足e/2称为FDUM-e</p>
+<p>不确定性感知推理算法：通过为不确定性较低（区域）的上传（调整）数据分配更高的权重作为信任指标</p>
+<h3 id="评估">评估
+</h3><p>对比三种隐私保护基线机制。它们与DUM-e之间的区别在于生成混淆矩阵P的方法。</p>
+<p>Self为自混淆对分配了更高的概率，拉普拉斯倾向于以高概率将一个区域混淆到其附近的区域，指数也是一种广泛使用的差分隐私机制，我们将其评分函数设置为不确定性矩阵</p>
+<p>数据：温度，出租车的四天轨迹数据集</p>
+<p>自变量：隐私级别，每个周期中选择的参与者数量k</p>
+<p>并定义了LossMAE</p>
+<p>评估结果：与三个基线相比，DUM-e可以将数据质量损失降低42%，FDUM-e额外质量损失&lt;3%计算时间小于DUM-e的1%</p>
+<p>不确定性感知推理算法与普通压缩感知进行比较</p>
+<h3 id="相关工作">相关工作
+</h3><p>对手对目标用户位置分布的先验知识很敏感</p>
+<p>普拉斯噪声将用户的实际位置更改为模糊位置，通过扰乱特定区域的总参与者数量来保护差异位置隐私，通过最小化实际位置和混淆位置之间的预期距离来优化LBS服务</p>
+<h3 id="结论">结论
+</h3><p>所提出的框架包括：（1）数据调整函数，（2）线性规划及其快速近似，（3）不确定性感知数据推理算法。未来，我们将通过添加其他隐私保护保证和放宽学习混淆矩阵的准确数据要求来扩展这一框架</p>
 
 </section>
 
@@ -433,6 +452,39 @@
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/%E5%B8%88%E5%A7%90%E8%AE%BA%E6%96%87/">
+        
+        
+            <div class="article-image">
+                <img src="/p/%E5%B8%88%E5%A7%90%E8%AE%BA%E6%96%87/8a57cba2471e8a2495fb97fc0c03d9ac26dfa064.86a885bb863fe310017c14b03ed1c4f2_hu17008675955353941250.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post 师姐论文"
+                        
+                        data-hash="md5-hqiFu4Y/4xABfBSwPtHE8g==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">师姐论文</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     

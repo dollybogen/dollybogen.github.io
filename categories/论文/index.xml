@@ -7,7 +7,34 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>dolly</copyright>
-        <lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E8%AE%BA%E6%96%87/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 03 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E8%AE%BA%E6%96%87/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>师姐论文</title>
+        <link>http://localhost:1313/p/%E5%B8%88%E5%A7%90%E8%AE%BA%E6%96%87/</link>
+        <pubDate>Thu, 03 Apr 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/%E5%B8%88%E5%A7%90%E8%AE%BA%E6%96%87/</guid>
+        <description>&lt;img src="http://localhost:1313/p/%E5%B8%88%E5%A7%90%E8%AE%BA%E6%96%87/8a57cba2471e8a2495fb97fc0c03d9ac26dfa064.jpg" alt="Featured image of post 师姐论文" /&gt;&lt;h2 id=&#34;背景&#34;&gt;背景
+&lt;/h2&gt;&lt;p&gt;24年2月发过第一版投刊未知，没挂我名&amp;ndash;24年8月投infocom（ccf a）&amp;mdash;25年2月投&lt;/p&gt;
+&lt;h2 id=&#34;摘要&#34;&gt;摘要
+&lt;/h2&gt;&lt;p&gt;题目：空间众包中位置和价值混淆的隐私保护数据完成&lt;/p&gt;
+&lt;p&gt;目的：确保数据可用性（保护时空相关性），同时保护用户隐私（需要详细数据）&lt;/p&gt;
+&lt;p&gt;结构：预测模型从历史数据中提取（重要性矩阵）‘选位置’和（关系矩阵）‘调整数据’&lt;/p&gt;
+&lt;h2 id=&#34;介绍&#34;&gt;介绍
+&lt;/h2&gt;&lt;p&gt;时空数据的重要-&amp;gt;空间众包-&amp;gt;数据补全-&amp;gt;隐私问题-&amp;gt;传统的对位置直接的混淆-&amp;gt;&lt;/p&gt;
+&lt;p&gt;挑战：如何处理随机中存在的更重要的信息（第一个挑战）-&amp;gt;实际的值不一样，调整的动态性（第二个挑战）-&amp;gt;保持混淆策略有效性的同时降低其复杂性(第三个)&lt;/p&gt;
+&lt;p&gt;解决方案：设计了一种基于线性规划的位置混淆策略，将原始位置重定向到更重要的位置。重要性矩阵，预测模型，补全的反馈，迭代。使用2临界图降低线性规划的复杂度&lt;/p&gt;
+&lt;p&gt;贡献：1.提出了一种用于空间众包的隐私保护数据完成框架   2.提出了一种基于差分隐私的混淆策略，获得重要性矩阵，简化约束，降低复杂度     3.设计了一种基于动态值调整的策略，预测模型反馈   4.五个数据集&lt;/p&gt;
+&lt;h2 id=&#34;相关工作&#34;&gt;相关工作
+&lt;/h2&gt;&lt;h3 id=&#34;数据补全&#34;&gt;数据补全
+&lt;/h3&gt;&lt;p&gt;当前：压缩感知，矩阵分解，基于深度学习&lt;/p&gt;
+&lt;p&gt;区域的选择：主动传感，强化学习选择位置&lt;/p&gt;
+&lt;p&gt;未来数据的预测：深度学习，时空transformer&lt;/p&gt;
+&lt;h3 id=&#34;位置隐私保护&#34;&gt;位置隐私保护
+&lt;/h3&gt;&lt;p&gt;差分隐私，降低先验知识的影响，但数据直接加噪会数据失真-&amp;gt;&lt;/p&gt;
+&lt;p&gt;位置混淆   保护隐私和维护数据效用之间的权衡&amp;ndash;例子：线性规划，地理不可区分性&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>16年论文</title>
         <link>http://localhost:1313/p/16%E5%B9%B4%E8%AE%BA%E6%96%87/</link>
         <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
@@ -49,6 +76,22 @@
 &lt;p&gt;目标：最小化U中数据不确定性的总体期望&lt;/p&gt;
 &lt;p&gt;约束：均匀模糊区域分布模糊区域需要均匀分布&lt;/p&gt;
 &lt;p&gt;线性优化：DUM-e，实质是一个满足约束的一个线性优化问题&lt;/p&gt;
+&lt;p&gt;最优模糊矩阵的近似：DUM-e是O3的复杂度，因为其为一个完全图&lt;/p&gt;
+&lt;p&gt;使用2临界图进行改进e经过一次传递，变成满足e/2称为FDUM-e&lt;/p&gt;
+&lt;p&gt;不确定性感知推理算法：通过为不确定性较低（区域）的上传（调整）数据分配更高的权重作为信任指标&lt;/p&gt;
+&lt;h3 id=&#34;评估&#34;&gt;评估
+&lt;/h3&gt;&lt;p&gt;对比三种隐私保护基线机制。它们与DUM-e之间的区别在于生成混淆矩阵P的方法。&lt;/p&gt;
+&lt;p&gt;Self为自混淆对分配了更高的概率，拉普拉斯倾向于以高概率将一个区域混淆到其附近的区域，指数也是一种广泛使用的差分隐私机制，我们将其评分函数设置为不确定性矩阵&lt;/p&gt;
+&lt;p&gt;数据：温度，出租车的四天轨迹数据集&lt;/p&gt;
+&lt;p&gt;自变量：隐私级别，每个周期中选择的参与者数量k&lt;/p&gt;
+&lt;p&gt;并定义了LossMAE&lt;/p&gt;
+&lt;p&gt;评估结果：与三个基线相比，DUM-e可以将数据质量损失降低42%，FDUM-e额外质量损失&amp;lt;3%计算时间小于DUM-e的1%&lt;/p&gt;
+&lt;p&gt;不确定性感知推理算法与普通压缩感知进行比较&lt;/p&gt;
+&lt;h3 id=&#34;相关工作&#34;&gt;相关工作
+&lt;/h3&gt;&lt;p&gt;对手对目标用户位置分布的先验知识很敏感&lt;/p&gt;
+&lt;p&gt;普拉斯噪声将用户的实际位置更改为模糊位置，通过扰乱特定区域的总参与者数量来保护差异位置隐私，通过最小化实际位置和混淆位置之间的预期距离来优化LBS服务&lt;/p&gt;
+&lt;h3 id=&#34;结论&#34;&gt;结论
+&lt;/h3&gt;&lt;p&gt;所提出的框架包括：（1）数据调整函数，（2）线性规划及其快速近似，（3）不确定性感知数据推理算法。未来，我们将通过添加其他隐私保护保证和放宽学习混淆矩阵的准确数据要求来扩展这一框架&lt;/p&gt;
 </description>
         </item>
         
